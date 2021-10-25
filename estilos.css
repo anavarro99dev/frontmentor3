@@ -26,6 +26,7 @@ ul {
   position: absolute;
   top: 15vh;
   left: 15vw;
+  border-radius: 10px;
 }
 
 footer {
@@ -34,5 +35,22 @@ footer {
   position: absolute;
   bottom: 0;
   text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: initial;
+    width: 100vw;
+    position: static;
+  }
+  footer {
+    width: initial;
+    position: static;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
