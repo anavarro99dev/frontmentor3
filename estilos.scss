@@ -7,60 +7,129 @@ $very_light_GRAY: hsl(0, 0%, 95%); //background, headings, buttons
 
 $font_body: 15px;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Red+Hat+Display:wght@500&display=swap');
-$font_LEXEND_DECA: 'Inter', sans-serif;
-$weights_LEXEND_DECA: 400;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Red+Hat+Display:wght@500&display=swap");
+$font_LEXEND_DECA: "Inter", sans-serif;
+$weights_LEXEND_DECA: 700;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Red+Hat+Display:wght@500&display=swap');
-$font_BIG_SHOULDERS_DISPLAY: 'Red Hat Display', sans-serif;
-$weights_BIG_SHOULDERS_DISPLAY: 700;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Red+Hat+Display:wght@500&display=swap");
+$font_BIG_SHOULDERS_DISPLAY: "Red Hat Display", sans-serif;
+$weights_BIG_SHOULDERS_DISPLAY: 400;
 
-*, *::after, *::before{
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
     width: 100vw;
+
+    font-family: $font_BIG_SHOULDERS_DISPLAY;
+    font-weight: $weights_BIG_SHOULDERS_DISPLAY;
+    font-size: $font_body;
+    color: $very_light_GRAY;
 }
 
-ul{
+ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    height: 70vh;
+    align-content: space-around;
+    justify-content: space-around;
+
+    // height: 100vh;
     width: 70vw;
 
     position: absolute;
-    top: 15vh;
+    top: 12vh;
     left: 15vw;
 
     border-radius: 10px;
 }
 
-footer{
+li {
+    padding: 4.2em;
+
+    img {
+        margin-bottom: 2em;
+    }
+    h1 {
+        margin-bottom: 1.5em;
+        text-transform: uppercase;
+    }
+    p {
+        margin-bottom: 5em;
+        color: $transparent_WHITE;
+    }
+    button {
+        font-family: $font_LEXEND_DECA;
+        font-weight: $weights_LEXEND_DECA;
+
+        width: 70%;
+        height: 3.5em;
+
+        border-radius: 30px;
+        border: {
+            color: $very_light_GRAY;
+            style: solid;
+        }
+
+        background-color: $very_light_GRAY;
+    }
+    button:hover{background-color: inherit;}
+}
+#card1 {
+    button{color:$bright_ORANGE;}
+    button:hover{color: $very_light_GRAY;}
+    background-color: $bright_ORANGE;
+    border-radius: 10px 0 0 10px;
+}
+#card2 {
+    button{color:$dark_CYAN;}
+    button:hover{color: $very_light_GRAY;}
+    background-color: $dark_CYAN;
+}
+#card3 {
+    button{color:$very_dark_CYAN;}
+    button:hover{color: $very_light_GRAY;}
+    background-color: $very_dark_CYAN;
+    border-radius: 0 10px 10px 0;
+}
+
+footer {
     border: solid blue;
     width: 100%;
 
     position: absolute;
     bottom: 0;
     text-align: center;
+
+    display: none;
 }
 
-@media screen and (max-width: 900px){
-    ul{
+@media screen and (max-width: 900px) {
+    ul {
         flex-direction: column;
-        height: initial;
-        width: 100vw;
-    
+        width: 80vw;
+
         position: static;
+        margin: 6vh 6vw;
     }
-    
-    footer{
+
+    #card1 {
+        border-radius: 10px 10px 0 0;
+    }
+    #card3 {
+        border-radius: 0 0 10px 10px;
+    }
+
+    footer {
         width: initial;
         position: static;
         text-align: center;
+        display: none;
     }
 }
