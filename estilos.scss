@@ -21,10 +21,21 @@ $weights_BIG_SHOULDERS_DISPLAY: 700;
     box-sizing: border-box;
 }
 
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
 ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    height: 70vh;
+    width: 70vw;
+
+    position: absolute;
+    top: 15vh;
+    left: 15vw;
 }
 
 footer{
