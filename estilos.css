@@ -110,12 +110,22 @@ li button:hover {
 }
 
 footer {
-  border: solid blue;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   bottom: 0;
   text-align: center;
-  display: none;
+  color: darkgreen;
+}
+
+footer a {
+  color: grey;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
 }
 
 @media screen and (max-width: 900px) {
@@ -138,7 +148,6 @@ footer {
     width: initial;
     position: static;
     text-align: center;
-    display: none;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
