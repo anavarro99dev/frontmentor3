@@ -1,0 +1,37 @@
+$bright_ORANGE: hsl(31, 77%, 52%);
+$dark_CYAN: hsl(184, 100%, 22%);
+$very_dark_CYAN: hsl(179, 100%, 13%);
+
+$transparent_WHITE: hsla(0, 0%, 100%, 0.75); // paragraphs
+$very_light_GRAY: hsl(0, 0%, 95%); //background, headings, buttons
+
+$font_body: 15px;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Red+Hat+Display:wght@500&display=swap');
+$font_LEXEND_DECA: 'Inter', sans-serif;
+$weights_LEXEND_DECA: 400;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Red+Hat+Display:wght@500&display=swap');
+$font_BIG_SHOULDERS_DISPLAY: 'Red Hat Display', sans-serif;
+$weights_BIG_SHOULDERS_DISPLAY: 700;
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+footer{
+    border: solid blue;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
